@@ -1,0 +1,32 @@
+package myPack;
+import java.util.*;
+public class FixedStack {
+	public static void main(String[] args){
+		Thread thread= new Thread(new VariableStack());
+		thread.start();
+	}
+}
+
+package myPack;
+import java.util.*;
+
+public class VariableStack implements Runnable{
+	
+	static Thread thread = new Thread();
+public void run(){
+	
+	System.out.println("Enter the no. to be tested");
+	Scanner scan=new Scanner(System.in);
+	int k= scan.nextInt();
+	for(int i=2;i<k;i++){
+		if(k%i==0){
+			System.out.println("the number is not prime");
+			break;}
+		if(i==k-1)	{
+			System.out.println("The number is prime");
+		}
+	}
+}
+
+}
+
